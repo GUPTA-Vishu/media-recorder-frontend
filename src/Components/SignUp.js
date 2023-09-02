@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
-const BACKEND_URL = "https://media-recorder-backend-app.onrender.com/"
-
+const BACKEND_URL = process.env.BACKEND_URL;
 
 const SignUp = () => {
 

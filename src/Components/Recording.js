@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ReactMediaRecorder } from 'react-media-recorder';
-const BACKEND_URL = "https://media-recorder-backend-app.onrender.com/"
+const BACKEND_URL = process.env.BACKEND_URL;
 
 function Recording() {
   const [selectedMode, setSelectedMode] = useState(null)
