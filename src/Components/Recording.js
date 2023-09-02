@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ReactMediaRecorder } from 'react-media-recorder';
-
+const BACKEND_URL = "https://media-recorder-backend-app.onrender.com/"
 
 function Recording() {
   const [selectedMode, setSelectedMode] = useState(null)
@@ -25,7 +25,7 @@ const [showSuccessMessage, setShowSuccessMessage] = useState(false);
       const formData = new FormData();
       formData.append('media', new Blob([mediaBlobUrl], { type: 'video/webm' })); 
   
-      const response = await fetch('/upload-media', {
+      const response = await fetch(`${BACKEND_URL}/upload-media`, {
         method: 'POST',
         body: formData,
       });

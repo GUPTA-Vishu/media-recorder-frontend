@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
+const BACKEND_URL = "https://media-recorder-backend-app.onrender.com/"
+
 
 const SignUp = () => {
 
@@ -42,7 +44,7 @@ const SignUp = () => {
 
     setError("");
 
-    const res = await fetch("/register", {
+    const res = await fetch(`${BACKEND_URL}/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

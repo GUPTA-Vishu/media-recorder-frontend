@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+const BACKEND_URL = "https://media-recorder-backend-app.onrender.com/"
+
+
 const LoginPage = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -24,7 +27,7 @@ const LoginPage = () => {
     e.preventDefault();
     const { email, password } = formData;
 
-    const res = await fetch("/signin", {
+    const res = await fetch(`${BACKEND_URL}/signin`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
